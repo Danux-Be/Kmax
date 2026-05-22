@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>org.kde.kmax</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0-or-later</project_license>
+    <name>Kmax</name>
+    <summary>Restore and upscale videos with AI</summary>
+    <summary xml:lang="fr">Restaurer et upscaler des vidéos avec l'IA</summary>
+    <description>
+        <p>
+            Kmax is a native KDE application for automatic video enhancement and
+            AI upscaling. It restores videos from heterogeneous sources — old
+            AVI files, DVDs, camcorder footage — and upscales them using
+            Real-ESRGAN via the vendor-agnostic Vulkan backend.
+        </p>
+        <p>Features:</p>
+        <ul>
+            <li>Import from local files and DVDs</li>
+            <li>Automatic deinterlace, denoise and colour correction</li>
+            <li>AI upscaling on AMD, NVIDIA and Intel GPUs via Vulkan</li>
+            <li>Configurable working directory for intermediate frames</li>
+            <li>Extensible plugin architecture (sources, filters, upscalers, encoders)</li>
+        </ul>
+    </description>
+    <launchable type="desktop-id">org.kde.kmax.desktop</launchable>
+    <url type="homepage">https://github.com/Danux-Be/Kmax</url>
+    <url type="bugtracker">https://github.com/Danux-Be/Kmax/issues</url>
+    <developer_name>Dany Petit</developer_name>
+    <provides>
+        <binary>kmax</binary>
+    </provides>
+    <content_rating type="oars-1.1"/>
+    <releases>
+        <release version="0.1.0" date="2026-05-22">
+            <description>
+                <p>Initial release: project skeleton, KDE-native UI, configurable
+                   working directory, plugin architecture with four interfaces,
+                   built-in file/DVD sources, Real-ESRGAN upscaler and FFmpeg
+                   encoder.</p>
+            </description>
+        </release>
+    </releases>
+</component>

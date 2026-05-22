@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Id": "kmax_filter_sepia",
+        "Name": "Sepia tone",
+        "Name[fr]": "Teinte sépia",
+        "Description": "Demo filter: applies a warm sepia tone to the video.",
+        "Description[fr]": "Filtre de démo : applique une teinte sépia chaude à la vidéo.",
+        "Authors": [
+            { "Name": "Dany Petit", "Email": "danypetit.be@gmail.com" }
+        ],
+        "Version": "0.1.0",
+        "License": "GPL-3.0-or-later",
+        "Icon": "color-picker"
+    },
+    "X-Kmax-Type": "Filter",
+    "X-Kmax-ApiVersion": 1
+}

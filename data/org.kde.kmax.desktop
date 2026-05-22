@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Kmax
+GenericName=Video enhancement and upscaling
+GenericName[fr]=Amélioration et upscaling vidéo
+Comment=Restore and upscale videos with AI
+Comment[fr]=Restaurer et upscaler des vidéos avec l'IA
+Exec=kmax %U
+Icon=kmax
+Type=Application
+Categories=Qt;KDE;AudioVideo;VideoConverter;
+Terminal=false
+MimeType=video/x-msvideo;video/mp4;video/x-matroska;video/quicktime;video/mpeg;video/x-ms-wmv;video/webm;
+StartupNotify=true
+StartupWMClass=kmax

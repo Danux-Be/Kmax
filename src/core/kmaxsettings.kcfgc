@@ -1,0 +1,5 @@
+File=kmaxsettings.kcfg
+ClassName=KmaxSettings
+Singleton=true
+Mutators=true
+IncludeFiles=QStandardPaths,QUrl

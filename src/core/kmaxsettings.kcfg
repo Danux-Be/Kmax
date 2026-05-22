@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name="kmaxrc"/>
+
+    <group name="Storage">
+        <entry name="workingDirectory" type="Url">
+            <label>Directory where Kmax stores intermediate frames and caches.</label>
+            <default code="true">QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/kmax"))</default>
+        </entry>
+        <entry name="defaultOutputDirectory" type="Url">
+            <label>Default directory for finished, upscaled videos.</label>
+            <default code="true">QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::MoviesLocation))</default>
+        </entry>
+        <entry name="keepIntermediateFiles" type="Bool">
+            <label>Keep extracted frames after processing (useful for debugging, costly in disk).</label>
+            <default>false</default>
+        </entry>
+        <entry name="minFreeSpaceGiB" type="Int">
+            <label>Warn the user if free space in the working directory falls below this value (GiB).</label>
+            <default>20</default>
+            <min>1</min>
+        </entry>
+    </group>
+
+    <group name="Processing">
+        <entry name="parallelJobs" type="Int">
+            <label>Number of jobs to process in parallel.</label>
+            <default>1</default>
+            <min>1</min>
+            <max>16</max>
+        </entry>
+        <entry name="defaultUpscaler" type="String">
+            <label>Plugin id of the default upscaler.</label>
+            <default>realesrgan-ncnn-vulkan</default>
+        </entry>
+        <entry name="defaultUpscaleModel" type="String">
+            <label>Default Real-ESRGAN model name.</label>
+            <default>realesrgan-x4plus</default>
+        </entry>
+        <entry name="defaultUpscaleFactor" type="Int">
+            <label>Default upscale factor (2, 3 or 4).</label>
+            <default>4</default>
+            <min>2</min>
+            <max>4</max>
+        </entry>
+        <entry name="gpuDeviceIndex" type="Int">
+            <label>Vulkan GPU device index. -1 means auto-detect.</label>
+            <default>-1</default>
+        </entry>
+        <entry name="tileSize" type="Int">
+            <label>Tile size for the upscaler. 0 means auto.</label>
+            <default>0</default>
+            <min>0</min>
+        </entry>
+    </group>
+
+    <group name="Encoding">
+        <entry name="defaultEncoder" type="String">
+            <label>Plugin id of the default encoder.</label>
+            <default>ffmpeg</default>
+        </entry>
+        <entry name="defaultVideoCodec" type="Enum">
+            <label>Default video codec.</label>
+            <choices>
+                <choice name="H264"/>
+                <choice name="H265"/>
+                <choice name="AV1"/>
+            </choices>
+            <default>H265</default>
+        </entry>
+        <entry name="defaultCrf" type="Int">
+            <label>Default constant rate factor (quality).</label>
+            <default>20</default>
+            <min>0</min>
+            <max>51</max>
+        </entry>
+    </group>
+
+    <group name="Filters">
+        <entry name="autoDeinterlace" type="Bool">
+            <label>Automatically apply deinterlacing when interlaced content is detected.</label>
+            <default>true</default>
+        </entry>
+        <entry name="autoDenoise" type="Bool">
+            <label>Apply temporal denoising by default.</label>
+            <default>true</default>
+        </entry>
+        <entry name="autoColorCorrect" type="Bool">
+            <label>Apply automatic colour correction.</label>
+            <default>false</default>
+        </entry>
+    </group>
+</kcfg>

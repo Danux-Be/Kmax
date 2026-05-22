@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gui name="kmax" version="1"
+     xmlns="http://www.kde.org/standards/kxmlgui/1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
+                         http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
+    <MenuBar>
+        <Menu name="file">
+            <text>&amp;File</text>
+            <Action name="file_add"/>
+            <Action name="file_add_dvd"/>
+        </Menu>
+        <Menu name="settings">
+            <text>&amp;Settings</text>
+            <Action name="plugins_about"/>
+        </Menu>
+    </MenuBar>
+    <ToolBar name="mainToolBar" position="Top">
+        <text>Main Toolbar</text>
+        <Action name="file_add"/>
+        <Action name="file_add_dvd"/>
+        <Separator/>
+        <Action name="options_configure"/>
+    </ToolBar>
+</gui>
