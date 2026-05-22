@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  SPDX-FileCopyrightText: 2026 Dany Petit <danypetit.be@gmail.com>
+  SPDX-License-Identifier: GPL-3.0-or-later
+
+  Kmax application icon. A bold white "K" on a Breeze-blue rounded
+  square, with three ascending yellow squares as the upscaling
+  signature.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256" width="256" height="256">
+
+  <defs>
+    <linearGradient id="bg" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#3daee9"/>
+      <stop offset="1" stop-color="#1d99f3"/>
+    </linearGradient>
+    <linearGradient id="bgRim" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square Breeze-style background -->
+  <rect x="16" y="16" width="224" height="224" rx="44" ry="44" fill="url(#bg)"/>
+  <rect x="16" y="16" width="224" height="224" rx="44" ry="44" fill="url(#bgRim)"/>
+
+  <!-- K letter: stem + two thick diagonal arms with rounded caps -->
+  <g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="76" y1="60" x2="76" y2="196" stroke-width="32"/>
+    <line x1="92" y1="128" x2="186" y2="60" stroke-width="32"/>
+    <line x1="92" y1="128" x2="186" y2="196" stroke-width="32"/>
+  </g>
+
+  <!-- Upscale signature: three ascending yellow squares -->
+  <g fill="#fcdc00">
+    <rect x="136" y="208" width="14" height="14" rx="2"/>
+    <rect x="156" y="200" width="14" height="14" rx="2"/>
+    <rect x="176" y="192" width="14" height="14" rx="2"/>
+  </g>
+</svg>

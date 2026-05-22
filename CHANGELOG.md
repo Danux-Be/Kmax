@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Application icon (`kmax`) in the hicolor theme: scalable SVG plus
+  bitmap variants at 16, 22, 32, 48, 64, 128 and 256 pixels. A bold
+  white "K" on a Breeze-blue rounded square with three ascending
+  yellow squares signing the upscaling feature.
+
+### Fixed
+- `data/CMakeLists.txt` used the deprecated `KDE_INSTALL_KXMLGUI5DIR`
+  variable; switched to the KF6 spelling `KDE_INSTALL_KXMLGUIDIR` so
+  `cmake --install` actually places `kmaxui.rc`.
+
 ## [0.1.0] - 2026-05-22
 
 ### Added
